@@ -1,0 +1,31 @@
+runmode: release # Gin 模式, debug, release, test
+addr: :8081 # HTTP Port
+name: go_demo # API Server Name
+url: http://127.0.0.1:8081 #  API Server domain
+max_ping_count: 10 # pingServer function try time
+db_reconnect: 100 # Every time reconnection DB
+jwt_secret:
+log:
+  writers: file,stdout
+  logger_level: DEBUG
+  logger_file: log/restful.log
+  log_format_text: false
+  rollingPolicy: daily
+  log_rotate_date: 1
+  log_rotate_size: 1
+  log_backup_count: 7
+db:
+  name: go
+  addr:
+  username:
+  password:
+common_db:
+  name: common
+  addr:
+  username:
+  password:
+storage_db:
+  name: storage
+  addr:
+  username:
+  password:
